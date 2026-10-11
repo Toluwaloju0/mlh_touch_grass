@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+.buildenv/
+.venv312/
+bin
+python-version
+.buildozer
