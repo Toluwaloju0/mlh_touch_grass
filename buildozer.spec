@@ -21,7 +21,8 @@ source.dir = .
 source.include_exts = py,png,jpg,kv,atlas,json
 
 # Keep development environments and prior build artifacts out of the APK.
-source.exclude_dirs = .git,.venv,.venv312,.buildenv,.buildozer,bin,__pycache__
+source.exclude_dirs = .git,.venv,.venv312,.buildenv,.buildozer,bin,__pycache__,p4a_recipes
+source.exclude_patterns = server.py,requirements.txt,build.log,build-server.log
 
 # (list) List of inclusions using pattern matching
 #source.include_patterns = assets/*,images/*.png
@@ -112,7 +113,7 @@ android.permissions = android.permission.INTERNET, android.permission.RECORD_AUD
 #android.features = android.hardware.usb.host
 
 # (int) Target Android API, should be as high as possible.
-android.api = 35
+android.api = 36
 
 # (int) Minimum API your APK / AAB will support.
 android.minapi = 24
@@ -122,6 +123,7 @@ android.minapi = 24
 
 # (str) Android NDK version to use
 #android.ndk = 23b
+android.ndk = 28c
 
 # (int) Android NDK API to use. This is the minimum API your app will support, it should usually match android.minapi.
 #android.ndk_api = 21
@@ -339,6 +341,8 @@ android.debug_artifact = apk
 
 # (str) python-for-android branch to use, defaults to master
 #p4a.branch = master
+p4a.branch = develop
+p4a.local_recipes = p4a_recipes
 
 # (str) python-for-android specific commit to use, defaults to HEAD, must be within p4a.branch
 #p4a.commit = HEAD

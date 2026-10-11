@@ -1,0 +1,10 @@
+--- a/setup.py
++++ b/setup.py
+@@ -570,7 +570,7 @@
+             print('Activate SDL2 compilation')
+ 
+-    if not sdl2_valid and platform != "ios":
++    if not sdl2_valid and platform not in ("ios", "android"):
+         # use pkg-config approach instead
+         sdl2_flags = pkgconfig('sdl2', 'SDL2_ttf', 'SDL2_image', 'SDL2_mixer')
+         if 'libraries' in sdl2_flags:

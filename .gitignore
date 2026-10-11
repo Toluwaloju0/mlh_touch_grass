@@ -2,6 +2,8 @@
 __pycache__/
 .buildenv/
 .venv312/
-bin
 python-version
 .buildozer
+build*.log
+build-server.log
+build.log
